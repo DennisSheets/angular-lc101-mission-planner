@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url(./assets/img/Hubble_Deep.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+    
+h1 {
+    font-size: 36pt;
+}
+
+h2 {
+    font-size: 20pt;
+}
+
+h3 {
+    font-size: 16pt;
+}

@@ -1,4 +1,22 @@
-.box {
-    display: flex;
-    padding: 10px;
+.header {
+    text-align: center;
 }
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.item {
+    order: 3;
+    align-self: auto;
+}
+
+
+
+

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
 
+  equipment: string[] = ['Habitat done','Drones','Food containers','Oxygen tanks']
   constructor() { }
 
   ngOnInit() {
