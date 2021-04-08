@@ -5,7 +5,13 @@
             <!-- "Add to Cargo Hold" button goes here. -->
             <!-- cargoHold.length === maxItems -->
             <!-- cargoMass + item.mass >= maximumAllowedMass -->
-            <button (click)="addItem(item)" [disabled]="permitted(item)" >Add to Cargo Hold</button>
+            <button *ngIf="!denied(item); notPermitted" (click)="addItem(item)" 
+                      style="background-color: yellowgreen;">Add to Cargo Hold
+            </button>
+            <button *ngIf="denied(item); notPermitted" (click)="addItem(item)" 
+                      [disabled]>Add to Cargo Hold
+            </button>
+
             {{item.name}}, {{item.mass}} kg
         </li>
     </ol>

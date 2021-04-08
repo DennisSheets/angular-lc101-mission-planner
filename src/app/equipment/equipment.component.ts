@@ -38,7 +38,7 @@ export class EquipmentComponent implements OnInit {
     }
    }
 
-  permitted(item){
+  denied(item){
     if (this.cargoHold.length >= this.maxItems ||
         this.cargoMass + item.mass > this.maximumAllowedMass){ 
       return true;
