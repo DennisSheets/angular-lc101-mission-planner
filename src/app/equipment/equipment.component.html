@@ -8,8 +8,7 @@
             <button *ngIf="!denied(item); notPermitted" (click)="addItem(item)" 
                       style="background-color: yellowgreen;">Add to Cargo Hold
             </button>
-            <button *ngIf="denied(item); notPermitted" (click)="addItem(item)" 
-                      [disabled]>Add to Cargo Hold
+            <button *ngIf="denied(item); notPermitted" [disabled]>Add to Cargo Hold
             </button>
 
             {{item.name}}, {{item.mass}} kg
@@ -25,7 +24,8 @@
         <li *ngFor="let equipment of cargoHold">{{equipment.name}}</li>
     </ol>
     <p>Mass in Hold: {{cargoMass}} kg</p>
-    <p>Mass Budget Remaining: {{<!-- Calculate mass remaining here. -->}} kg</p>
+    <p [class.nearMaxMass]="isMax" >Mass Budget Remaining: {{maximumAllowedMass - cargoMass}} kg</p>
+    <button (click)="clear()">Empty Hold</button>
     <!-- Add the "Empty Hold" button here. -->
 </div>
 
